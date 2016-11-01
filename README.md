@@ -50,3 +50,7 @@ These observations were taken on two machines in the same network.
 `TCPClient` and `UDPClient` start a clock before sending a message to `TCPServer` and `UDPServer`, respectively.  `TCPClient` and `UDPClient` then send bytes of data to `TCPServer` and `UDPServer`, respectively 100 times.  `TCPClient` and `UDPClient` then stop their clock, and divide the clock time by 100 to get the average round trip time for one request.
 
 This process is repeated for data of size 1 byte, 10 bytes, 100 bytes, 1,000 bytes, and 10,000 bytes.
+
+## References
+* Base client/server code modified from chapter 2.7.1 of __Computer Networking: A Top-Down Approach (7th Edition)__ by Kurose and Ross.
+* Modified code on multithreading found [here](http://www.tutorialspoint.com/python/python_multithreading.htm).
