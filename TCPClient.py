@@ -58,9 +58,9 @@ def getAverageTCPTimeToSend(serverName, serverPort, data, repetitions):
 	avgTime = deltaTime/repetitions
 	return avgTime
 
-# main() will send 1 byte, 10 bytes, 1000 bytes and 1,0000 bytes
-# to the host specified in the first command line argument on the
-# port specified in the second command line argument 1,000 times.
+# main() will send 1 byte, 10 bytes, 100 bytes and 1,000 bytes and
+# 10,000 bytes to the host specified in the first command line argument
+# on the port specified in the second command line argument 100 times.
 #
 # main() will then print out the average round trip time for these
 # data streams in a table as well as the number of repetitions.
@@ -69,7 +69,7 @@ def main():
 		clientName = gethostname()
 		serverName = sys.argv[1]
 		serverPort = int(sys.argv[2])
-		repetitions = 1000
+		repetitions = 100
 		
 		listOfBytes = []
 		for magnitude in range(0, 5):
